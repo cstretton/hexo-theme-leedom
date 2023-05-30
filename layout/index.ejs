@@ -1,6 +1,5 @@
 <div>
   <ul>
-    <!-- 遍历渲染文章 -->
     <% page.posts.forEach(function(item) { %>
     <li>
       <h3><%- item.date.format('MMM DD, YYYY') %></h3>
@@ -8,7 +7,7 @@
         <a href="<%- url_for(item.path) %>">
           <% if(item.title !== "") { %>
             <% if (item.top) { %>
-              <span><span title="<%= __('pinned') %>" class="icon iconfont icon-pin-top post-top"></span><%- item.title %></span>
+              <span><span title="<%= __('pinned') %>" class="iconify" data-icon="mdi-pin"></span><%- item.title %></span>
             <% } else { %>
               <span><%- item.title %></span>
             <% } %>
