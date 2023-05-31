@@ -4,8 +4,6 @@ favicon:
   touch_icon: /images/apple-touch-icon.png
 
 avatar:
-  author_photo: /images/avatar.png
-  author_nickname: Chris
   path: /
 
 prevnext:
