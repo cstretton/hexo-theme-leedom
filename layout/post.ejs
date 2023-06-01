@@ -23,9 +23,9 @@
   <% if(theme.prevnext.enable) { %>
     <% if(page.next) { %>
       <a id="older" class="blog-nav" href="<%- url_for(page.next.path) %>">OLDER&nbsp;&gt;</a>
-      <% } %>
-        <% if(page.prev) { %>
-          <a id="newer" class="blog-nav" href="<%- url_for(page.prev.path) %>">&lt;&nbsp;NEWER</a>
-          <% } %>
-            <% } %>
+    <% } %>
+    <% if(page.prev) { %>
+      <a id="newer" class="blog-nav" href="<%- url_for(page.prev.path) %>">&lt;&nbsp;NEWER</a>
+    <% } %>
+  <% } %>
 </div>
