@@ -4,7 +4,7 @@
       var prev = -10086;// prev year
       var curr;// curr year, ever step be updated
 
-      site.posts.sort('date', -1).each(function(item, index) {
+      page.posts.sort('date', -1).each(function(item, index) {
         curr = item.date.year()
         if (curr !== prev) {
           prev = curr;
