@@ -12,25 +12,25 @@ prevnext:
 link: 
   -
     name: archives
-    icon: mdi-bookmark
+    icon: archive
     path: /archives/
   -
     name: github
-    icon: mdi-github
+    icon: github
     path: https://github.com/cstretton
     target: _blank
   -
     name: email
-    icon: mdi-at
+    icon: at
     path: mailto:chris@stretton.xyz 
   -
     name: instagram
-    icon: mdi-instagram
+    icon: instagram
     path: https://www.instagram.com/cheezykins/
     target: _blank
   -
     name: feed
-    icon: mdi-rss
+    icon: rss
     path: /atom.xml
     target: _blank
 
