@@ -1,5 +1,12 @@
 <div class="container archives">
   <div class="post-list">
+    <% if (is_tag()) { %>
+      <div class="content-title">
+        <h2>
+          <span>Tag: <%- page.tag %></span>
+        </h2>
+      </div>      
+    <% } %>
     <%
       var prev = -10086;// prev year
       var curr;// curr year, ever step be updated
