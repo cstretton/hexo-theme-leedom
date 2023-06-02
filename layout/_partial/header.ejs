@@ -51,6 +51,8 @@
   <meta name="twitter:url" content="<%= theme.favicon.touch_icon %>">
   <meta name="twitter:card" content="<%= page.excerpt ?? config.description %>">
 
+  <%- autoCanonical(config, page) %>.
+
   <title>
     <%= title %>
   </title>
