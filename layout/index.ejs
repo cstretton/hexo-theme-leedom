@@ -7,7 +7,10 @@
         <a href="<%- url_for(item.path) %>">
           <% if(item.title !== "") { %>
             <% if (item.top) { %>
-              <span><span title="<%= __('pinned') %>" class="iconify" data-icon="mdi-pin"></span><%- item.title %></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2Z"/></svg>
+                <%- item.title %>
+              </span>
             <% } else { %>
               <span><%- item.title %></span>
             <% } %>
