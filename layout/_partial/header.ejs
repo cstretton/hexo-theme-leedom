@@ -1,12 +1,8 @@
 <head>
   <%- partial('_partial/gtm-head') %>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="<%= config.keywords %>" />
-  <meta name="author" content="<%= config.author %>" />
-  <meta name="description" content="<%= config.description %>" />
+
   <%
-    var title = page.title;
+    var title = page.title ?? '';
 
     if (is_archive()){
       title = 'archive_a';
@@ -25,15 +21,38 @@
     } else if (title === "about") {
       title = "about"
     }
+
+    if (title) {
+      title = __(title);
+      if (page.tag) {
+        title += ' : ' + page.tag;
+      }
+      if (page.category) {
+        title += ' : ' + page.category;
+      }
+      title += ' - ';
+    }
+    title += config.title
   %>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="<%= config.keywords %>" />
+  <meta name="author" content="<%= config.author %>" />
+  <meta name="description" content="<%= page.excerpt ?? config.description %>" />
+
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= page.excerpt ?? config.description %>">
+  <meta property="og:image" content="<%= theme.favicon.touch_icon %>">
+  <meta property="og:url" content="<%= config.url %>">
+
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= config.description %>">
+  <meta name="twitter:url" content="<%= theme.favicon.touch_icon %>">
+  <meta name="twitter:card" content="<%= page.excerpt ?? config.description %>">
+
   <title>
-    <% if (title) { %>
-      <%= __(title) %> 
-      <% if (page.tag) { %> : <%= page.tag %><% } %>
-      <% if (page.category) { %> : <%= page.category %><% } %>
-    <% } else { %>
-      <%= config.title %>
-    <% } %>
+    <%= title %>
   </title>
 
   <% if (theme.favicon.enable){ %>
