@@ -9,7 +9,7 @@
     <%- page.more %>
   </div>
   <div class="tags">
-    <%- tagcloud(page.tags) %>
+    <%- tagcloud(page.tags, {max_font: 10}) %>
   </div>
   <% if(theme.prevnext.enable) { %>
     <% if(page.next) { %>
