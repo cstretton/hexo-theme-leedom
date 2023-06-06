@@ -1,6 +1,6 @@
 favicon:
   enable: true
-  icon: /images/favicon.ico
+  icon: /favicon.ico
   touch_icon: /images/apple-touch-icon.png
 
 avatar:
