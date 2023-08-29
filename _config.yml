@@ -24,11 +24,6 @@ link:
     icon: at
     path: mailto:chris@stretton.xyz 
   -
-    name: instagram
-    icon: instagram
-    path: https://www.instagram.com/cheezykins/
-    target: _blank
-  -
     name: feed
     icon: rss
     path: /atom.xml
