@@ -20,6 +20,11 @@ link:
     path: https://github.com/chris114782
     target: _blank
   -
+    name: instagram
+    icon: instagram
+    path: https://www.instagram.com/fatcheezslim/
+    target: _blank
+  -
     name: feed
     icon: rss
     path: /atom.xml
