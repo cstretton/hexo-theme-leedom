@@ -25,6 +25,10 @@ link:
     path: https://www.instagram.com/fatcheezslim/
     target: _blank
   -
+    name: email
+    icon: at
+    path: mailto:chris@stretton.xyz 
+  -
     name: feed
     icon: rss
     path: /atom.xml
